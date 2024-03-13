@@ -12,6 +12,8 @@ document.getElementById("txtUNC").addEventListener("keydown", (event)=>{
 /*
 	Converts a Windows UNC path prefix with file:/// and/or \\
 	into a MAC compatible SMB path.
+	
+	\\server\folder abc\my file.txt
 */
 function UncToMac()
 {
@@ -30,6 +32,12 @@ function UncToMac()
 	
 	// Replace backslash with forward slashes
 	finalValue = finalValue.replace(/\\/g, "/");
+	
+	if(document.getElementById("chkSpaces").checked === true)
+	{
+		// Replace backslash with forward slashes
+		finalValue = finalValue.replace(/ /g, "\\ ");
+	}
 	
 	// Build the final SMB path
 	finalValue = `${prefix}${finalValue}`;
