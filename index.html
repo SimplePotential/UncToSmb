@@ -15,7 +15,12 @@
 				<div id="main-form-title">Convert Windows UNC to Mac SMB Path</div>
 				<form id="main-form-form" onreset="ClearStatus()">
 					<input type="text" id="txtUNC" class="inputText" placeholder="Window's UNC Path" onfocus="SelectAll(this)" autocomplete="off" /><br/>
-					<input type="checkbox" id="chkSpaces" checked /><label for="chkSpaces">Escape Spaces (recommended)</label><br/>
+					<!-- <input type="checkbox" id="chkSpaces" checked /><label for="chkSpaces">Escape Spaces (recommended)</label><br/> -->
+					<select id="cboEscape" class="cboBox">
+						<option value="escape-1">Escape Spaces %20 (recommended)</option>
+						<option value="escape-2">Escape Spaces with \ </option>
+						<option value="escape-0">Do Not Escape Spaces</option>
+					</select>
 					<input type="button" onclick="UncToMac()" value="Convert" class="inputButton" /><input type="reset" value="Clear" class="inputButton" /><br/>
 					<input type="text" id="txtSMB" class="inputText" placeholder="SMB (Mac) Path Result" onfocus="SelectAll(this)" autocomplete="off" readonly /><br/>
 				</form>

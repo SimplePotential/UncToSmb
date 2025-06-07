@@ -31,10 +31,25 @@ function UncToMac()
 	// Replace backslash with forward slashes
 	finalValue = finalValue.replace(/\\/g, "/");
 	
+	/*
 	if(document.getElementById("chkSpaces").checked === true)
 	{
 		// Replace backslash with forward slashes
 		finalValue = finalValue.replace(/ /g, "\\ ");
+	}
+	*/
+
+	// Check if we want to escape spaces
+	switch(document.getElementById("cboEscape").value)
+	{
+		case 'escape-1': // Escape with %20 such as for a URL, most of my test users needed this method.
+			finalValue = finalValue.replace(/ /g, "%20");
+			break;
+		case 'escape-2': // Escape with standard backslash, some users had better luck with this method.
+			finalValue = finalValue.replace(/ /g, "\\ ");
+			break;
+		default: // Do not escape spaces at all.
+			finalValue = finalValue;
 	}
 	
 	// Build the final SMB path

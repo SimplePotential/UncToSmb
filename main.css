@@ -2,7 +2,7 @@ body
 {
 	font-family: Verdana, sans-serif; 
 	font-size: 0.8em;
-	background: #579635;
+	background: #2C3E50;
 }
 
 #main
@@ -21,7 +21,7 @@ body
 	padding: 4%;
 	margin: auto;
 	text-align: center;
-	background: #ffffff;
+	background: #FDFEFE;
 	box-shadow: 0 0 20px 0 rgba(0,0,0, .3), 0 5px 5px 0 rgba(0, 0, 0, 0.3);
 	border-radius: 12px;
 }
@@ -29,12 +29,12 @@ body
 #main-form-title
 {
 	padding: 15px 0 15px 0;
+	color: #2C3E50;
 }
 
 #main-form-status
 {
-	padding: 15px 0 15px 0;
-	
+	padding: 15px 0 15px 0;	
 }
 
 .inputText
@@ -42,23 +42,26 @@ body
 	width: 94%;
 	outline: 0;
 	background: #f2f2f2;
+	color: #2C3E50;
 	border: 0;
 	margin: 0 0 10px;
 	box-sizing: border-box;
 	font-size: 14px;
 	padding: 15px;
+	border-radius: 12px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .inputText:focus
 {
-	background: #b1fcba;
+	background: #a6c1d3;
 }
 
 .inputButton
 {
 	text-transform: uppercase;
 	outline: 0;
-	background: #4caf50;
+	background: #34495E;
 	width: 46%;
 	border: 0;
 	padding: 12px;
@@ -69,12 +72,30 @@ body
 	margin: 2% 1% 4%;
 	font-weight: bold;
 	text-shadow: 1px 1px rgba(0, 0, 0, .5);
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 	cursor: pointer;
+	border-radius: 12px;
 }
 
 .inputButton:hover, .inputButton:active, .inputButton:focus
 {
-	background: #40A860;
+	background: #2987c5;
+}
+
+.cboBox
+{
+	background-color: #f7f7f7;
+	border-color: #f2f2f2;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 12px;
+	padding: 15px;
+	color: #2C3E50;
+	min-width: 60%;
+}
+
+.cboBox option
+{
+	color: #2C3E50;
 }
 
 #main-form-footer
@@ -88,17 +109,17 @@ body
 
 #main-form-footer a
 {
-    color: #0000ff;
+    color: #3498DB;
     text-decoration: none;
 }
 
 #main-form-footer a:visited
 {
-    color: #0000ff;
+    color: #3498DB;
 }
 
 #main-form-footer a:hover
 {
-    color: #d40000;
+    color: #E67E22;
     text-decoration: underline;
 }
